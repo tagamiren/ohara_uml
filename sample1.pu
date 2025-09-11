@@ -1,0 +1,5 @@
+@startuml
+object 生物
+object 人間
+生物 <-- 人間
+@enduml
