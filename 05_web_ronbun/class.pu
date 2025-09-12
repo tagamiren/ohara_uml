@@ -1,0 +1,15 @@
+@startuml
+skinparam classAttributeIconSize 0
+class 学生 {
+ -学生ID
+ -名前
+ -生年月日
+ -専門分野
+ -入学年月日
+ -卒業年月日
+ +入学する()
+ +専門分野を決める()
+ +卒業する()
+}
+
+@enduml
