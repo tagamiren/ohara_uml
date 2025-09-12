@@ -1,0 +1,38 @@
+@startuml
+hide footbox
+
+actor       学生       as A
+boundary    メニュー画面    as B1
+boundary    学生登録画面    as B2
+control     学生情報登録     as C
+entity      学生オブジェクト      as E
+
+'時系列①
+activate A
+A -> B1: 学生登録を選択()
+activate B1
+B1 -> B2: 表示()
+activate B2
+'B1 <-- B2: 結果返却()
+deactivate B2
+'A <-- B1: 結果返却()
+deactivate B1
+deactivate A
+
+'時系列②
+A -> B2: 学生データ入力()
+activate A
+activate B2
+B2 -> C: 起動()
+activate C
+C -> E: 学生データ登録()
+activate E
+C <-- E: 結果返却()
+deactivate E
+'B2 <-- C: 結果返却()
+deactivate C
+'A <-- B2: 結果返却()
+deactivate B2
+deactivate A
+
+@enduml
