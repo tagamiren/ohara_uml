@@ -1,0 +1,107 @@
+@startuml
+actor ユーザー
+boundary メニュー画面 #FFCCCC
+boundary 整数入力画面 #FFCCCC
+control 2つの整数の表示 #FFFF99
+control 2つの整数を設定 #FFFF99
+entity RoboDog #99FF99
+boundary 結果画面 #FFCCCC
+
+ユーザー -> メニュー画面 : 足し算を選択()
+activate メニュー画面
+メニュー画面 -> 整数入力画面 : 遷移
+deactivate メニュー画面
+
+activate 整数入力画面
+ユーザー -> 整数入力画面 : 2つの整数を入力()
+整数入力画面 -> 2つの整数の表示 : 入力された整数を表示()
+deactivate 整数入力画面
+
+activate 2つの整数の表示
+2つの整数の表示 -> 2つの整数を設定 : 整数を渡す()
+deactivate 2つの整数の表示
+
+activate 2つの整数を設定
+2つの整数を設定 -> RoboDog : 整数を設定()
+deactivate 2つの整数を設定
+
+activate RoboDog
+RoboDog -> 結果画面 : 結果取得()
+deactivate RoboDog
+
+activate 結果画面
+結果画面 -> ユーザー : 結果を表示()@startuml
+actor ユーザー
+boundary メニュー画面 #FFCCCC
+boundary 整数入力画面 #FFCCCC
+control 2つの整数の表示 #FFFF99
+control 2つの整数を設定 #FFFF99
+control 足し算の処理 #FFFF99
+entity RoboDog #99FF99
+boundary 結果画面 #FFCCCC
+
+ユーザー -> メニュー画面 : 足し算を選択
+activate メニュー画面
+メニュー画面 -> 整数入力画面 : 遷移
+deactivate メニュー画面
+
+activate 整数入力画面
+ユーザー -> 整数入力画面 : 整数を入力
+整数入力画面 -> 2つの整数の表示 : 入力された整数を表示
+deactivate 整数入力画面
+
+activate 2つの整数の表示
+2つの整数の表示 -> 2つの整数を設定 : 整数を渡す
+deactivate 2つの整数の表示
+
+activate 2つの整数を設定
+2つの整数を設定 -> 足し算の処理 : 整数を渡す
+deactivate 2つの整数を設定
+@startuml
+actor ユーザー
+boundary メニュー画面 #FFCCCC
+boundary 整数入力画面 #FFCCCC
+control 2つの整数の表示 #FFFF99
+control 2つの整数を設定 #FFFF99
+control 足し算の処理 #FFFF99
+entity RoboDog #99FF99
+boundary 結果画面 #FFCCCC
+
+ユーザー -> メニュー画面 : 足し算を選択()
+activate メニュー画面
+メニュー画面 -> 整数入力画面 : メニュー画面から足し算を選択()
+deactivate メニュー画面
+
+activate 整数入力画面
+ユーザー -> 整数入力画面 : 整数を入力する()
+整数入力画面 -> 2つの整数の表示 : 入力された整数を表示()
+deactivate 整数入力画面
+
+activate 2つの整数の表示
+2つの整数の表示 -> 2つの整数を設定 : 整数を設定()
+deactivate 2つの整数の表示
+
+activate 2つの整数を設定
+2つの整数を設定 -> RoboDog : 整数を設定()
+RoboDog --> 2つの整数を設定 : 保存完了()
+2つの整数を設定 -> 足し算の処理 : 整数を渡す()
+deactivate 2つの整数を設定
+
+activate 足し算の処理
+足し算の処理 -> RoboDog : 結果登録()
+足し算の処理 -> 結果画面 : 足し算の結果を表示()
+deactivate 足し算の処理
+
+@enduml
+activate 足し算の処理
+足し算の処理 -> RoboDog : 計算結果を登録()
+deactivate 足し算の処理
+
+activate RoboDog
+RoboDog -> 結果画面 : 結果を表示()
+deactivate RoboDog
+
+@enduml
+deactivate 結果画面
+
+@enduml
