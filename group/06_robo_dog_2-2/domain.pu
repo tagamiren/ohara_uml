@@ -1,0 +1,20 @@
+@startuml RoboDogドメインモデル図
+skinparam componentStyle rectangle
+
+' RoboDog
+' 名前、時刻、挨拶、2つの整数
+[RoboDog] o-- [名前]
+[RoboDog] o-- [時刻]
+[RoboDog] o-- [挨拶]
+[RoboDog] o-- [2つの整数]
+
+' 挨拶
+' 朝の挨拶、昼の挨拶、夜の挨拶
+[挨拶] o-- [朝の挨拶]
+[挨拶] o-- [昼の挨拶]
+[挨拶] o-- [夜の挨拶]
+
+' 2つの整数
+[2つの整数] o-- [足し算をする]
+
+@enduml
