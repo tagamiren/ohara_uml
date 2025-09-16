@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor ユーザー as U
+
+rectangle 学生 {
+  usecase "入学する" as UC1
+  usecase "専門分野を決める" as UC2
+  usecase "卒業する" as UC3
+  usecase "学生データ登録" as UC4
+}
+
+U --> UC1
+U --> UC2
+U --> UC3
+U --> UC4
+@enduml
