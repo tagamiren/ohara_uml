@@ -1,0 +1,121 @@
+<mxfile host="65bd71144e">
+    <diagram id="5DfwSMmlrQ2DYcHCKKRp" name="ページ1">
+        <mxGraphModel dx="907" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="180" width="790" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-2" value="教職員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="280" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-3" value="メニュー&lt;div&gt;画面&lt;/div&gt;" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="200" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.002;entryY=0.511;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="iqDvwW4yLdDJP2QT4Gw2-2" target="iqDvwW4yLdDJP2QT4Gw2-3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="200" y="410" as="sourcePoint"/>
+                        <mxPoint x="250" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-6" value="論文審査メニューを選択" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="225" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-7" value="論文審査&lt;br&gt;&lt;div&gt;画面表示&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="240" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.029;entryY=0.495;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.016;exitY=0.515;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="iqDvwW4yLdDJP2QT4Gw2-3" target="iqDvwW4yLdDJP2QT4Gw2-7" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="210" y="541" as="sourcePoint"/>
+                        <mxPoint x="320" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-25" value="論文審査&lt;br&gt;&lt;div&gt;画面&lt;/div&gt;" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="400" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.948;entryY=0.272;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.062;exitY=0.834;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="iqDvwW4yLdDJP2QT4Gw2-7" target="iqDvwW4yLdDJP2QT4Gw2-25" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="350" y="310" as="sourcePoint"/>
+                        <mxPoint x="440" y="349" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-27" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.024;entryY=0.468;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="iqDvwW4yLdDJP2QT4Gw2-2" target="iqDvwW4yLdDJP2QT4Gw2-25" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="130" y="351" as="sourcePoint"/>
+                        <mxPoint x="240" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-28" value="審査対象論文を選択" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="350" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.971;exitY=0.739;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.086;entryY=0.459;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="iqDvwW4yLdDJP2QT4Gw2-25" target="15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="433" y="400" as="sourcePoint"/>
+                        <mxPoint x="414.8399999999999" y="486.72" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-31" value="論文情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="440" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="iqDvwW4yLdDJP2QT4Gw2-32" value="" style="endArrow=block;startArrow=block;endFill=1;startFill=1;html=1;rounded=0;exitX=0.966;exitY=0.505;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#FF0000;strokeColor=#000000;" parent="1" source="15" target="iqDvwW4yLdDJP2QT4Gw2-31" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="590" y="490" as="sourcePoint"/>
+                        <mxPoint x="750" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="審査完了&lt;div&gt;画面表示&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="560" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="審査完了&lt;div&gt;画面&lt;/div&gt;" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="570" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.016;entryY=0.601;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.903;exitY=0.726;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="11" edge="1" source="10">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="650" y="601" as="sourcePoint"/>
+                        <mxPoint x="690" y="601" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="論文情報&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;取得&lt;/span&gt;&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="450" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.862;entryY=0.899;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="iqDvwW4yLdDJP2QT4Gw2-25">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="410" y="500" as="sourcePoint"/>
+                        <mxPoint x="392.09000000000015" y="661.3599999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="112" y="340" as="sourcePoint"/>
+                        <mxPoint x="220" y="451" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="審査結果を入力" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="410" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="審査結果&lt;div&gt;登録&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="560" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.043;entryY=0.438;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.416;exitY=1.014;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iqDvwW4yLdDJP2QT4Gw2-25" target="21">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="428" y="317" as="sourcePoint"/>
+                        <mxPoint x="325" y="432" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="" style="endArrow=block;startArrow=block;endFill=1;startFill=1;html=1;rounded=0;exitX=0.944;exitY=0.438;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;fontColor=#FF0000;strokeColor=#000000;" edge="1" parent="1" source="21" target="iqDvwW4yLdDJP2QT4Gw2-31">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="492" y="500" as="sourcePoint"/>
+                        <mxPoint x="620" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.042;entryY=0.707;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.966;exitY=0.688;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="21" target="10">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="495" y="610" as="sourcePoint"/>
+                        <mxPoint x="650" y="724" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

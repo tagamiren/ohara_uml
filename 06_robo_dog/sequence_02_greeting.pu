@@ -1,0 +1,44 @@
+@startuml RoboDogシステム-時刻に応じた挨拶シーケンス図
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+
+actor ユーザー as A
+boundary メニュー画面 as B1
+boundary 時刻入力画面 as B2
+boundary 挨拶表示画面 as B3
+control 時刻登録 as C1
+control 挨拶取得 as C2
+entity Robodog as E
+
+A -> B1: 「時刻に応じた挨拶」を選択()
+activate B1
+
+B1 -> B2: 表示()
+deactivate B1
+activate B2
+
+A -> B2: 時刻を入力()
+
+B2 -> C1: 入力された時刻を登録()
+activate C1
+C1 -> E: 時刻保存()
+activate E
+E --> C1: 保存完了()
+deactivate E
+
+C1 -> C2: 時刻に応じた挨拶の言葉を取得()
+activate C2
+C2 -> E: 挨拶参照()
+activate E
+E --> C2: 挨拶の言葉
+deactivate E
+
+C2 -> B3: 表示()
+deactivate C2
+deactivate C1
+deactivate B2
+activate B3
+
+@enduml

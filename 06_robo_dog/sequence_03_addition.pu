@@ -1,0 +1,44 @@
+@startuml RoboDog-２つの整数の足し算シーケンス図
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+
+actor ユーザー as A
+boundary メニュー画面 as B1
+boundary 足し算入力画面 as B2
+boundary 計算結果画面 as B3
+control 整数登録 as C1
+control 足し算処理 as C2
+entity Robodog as E
+
+A -> B1: 「２つの整数の足し算」を選択()
+activate B1
+
+B1 -> B2: 表示()
+deactivate B1
+activate B2
+
+A -> B2: ２つの整数を入力()
+
+B2 -> C1: ２つの整数を登録()
+activate C1
+C1 -> E: 整数データ保存()
+activate E
+E --> C1: 保存完了()
+deactivate E
+
+C1 -> C2: 足し算処理を行う()
+deactivate C1
+activate C2
+C2 -> E: 足し算結果を登録()
+activate E
+E --> C2: 登録完了()
+deactivate E
+
+C2 -> B3: 表示()
+deactivate C2
+deactivate B2
+activate B3
+
+@enduml

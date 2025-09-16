@@ -1,0 +1,47 @@
+@startuml Web論文システム-入学手続シーケンス図
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+
+actor 学生 as A
+boundary メニュー画面 as B1
+boundary 入学手続画面 as B2
+boundary 予約完了画面 as B3
+control 入力検証 as C1
+control 学生情報登録 as C2
+entity 学生情報 as E
+
+A -> B1: 入学手続メニューを選択()
+activate B1
+
+B1 -> B2: 入学手続画面を表示()
+deactivate B1
+activate B2
+
+A -> B2: 学生情報を入力・送信()
+
+B2 -> C1: 入力内容を検証()
+activate C1
+
+opt 入力内容にエラーあり
+    C1 -> B2: エラーメッセージ表示()
+    ...以下、再度入力して送信...
+end
+
+C1 -> C2: 学生情報登録()
+deactivate C1
+activate C2
+
+C2 -> E: 学生情報保存()
+activate E
+
+E --> C2: 保存完了()
+deactivate E
+
+C2 -> B3: 予約完了画面表示()
+deactivate C2
+deactivate B2
+activate B3
+
+@enduml

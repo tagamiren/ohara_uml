@@ -1,0 +1,45 @@
+@startuml Web論文システム-論文審査シーケンス図
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+
+actor 教職員 as A
+boundary メニュー画面 as B1
+boundary 論文審査画面 as B2
+boundary 審査完了画面 as B3
+control 論文情報表示 as C1
+control 審査結果登録 as C2
+entity 論文情報 as E
+
+A -> B1: 論文審査メニューを選択()
+activate B1
+
+B1 -> B2: 論文審査画面を表示()
+deactivate B1
+activate B2
+
+A -> B2: 審査対象論文を選択()
+B2 -> C1: 論文情報取得()
+activate C1
+C1 -> E: 論文情報参照()
+activate E
+E --> C1: 取得完了()
+deactivate E
+C1 -> B2: 論文情報表示()
+deactivate C1
+
+A -> B2: 審査結果を入力・送信()
+B2 -> C2: 審査結果登録()
+activate C2
+C2 -> E: 審査結果保存()
+activate E
+E --> C2: 保存完了()
+deactivate E
+
+C2 -> B3: 審査完了画面表示()
+deactivate C2
+deactivate B2
+activate B3
+
+@enduml

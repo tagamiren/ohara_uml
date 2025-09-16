@@ -1,0 +1,21 @@
+@startuml Web論文システムユースケース図
+left to right direction
+actor 学生 as U1
+actor 教職員 as U2
+
+rectangle Web論文システム as WRS {
+  usecase 入学手続 as UC1
+  usecase "☆専門分野登録" as UC2
+  usecase "☆卒業手続" as UC3
+  usecase "☆論文登録" as UC4
+  usecase 論文審査 as UC5
+}
+
+note right of WRS: ☆マーク:\nユースケース記述、ロバストネス図、シーケンス図を省略
+
+U1 --> UC1
+U1 --> UC2
+U1 --> UC3
+U1 --> UC4
+U2 --> UC5
+@enduml
