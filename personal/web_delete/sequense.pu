@@ -1,0 +1,35 @@
+@startuml
+actor ユーザー as user
+participant "自身情報表示画面" as user_info_screen
+participant "削除注意ダイアログ" as delete_dialog
+participant "システム" as system
+participant "データベース" as database
+participant "削除完了ダイアログ" as completion_dialog
+participant "エラーダイアログ" as error_dialog
+participant "ログイン画面" as login_screen
+
+' ユーザーが削除ボタンを押す
+user -> user_info_screen : 「削除」ボタンをクリック
+user_info_screen -> delete_dialog : 削除注意ダイアログ表示
+
+alt 「はい」を選択
+  user -> delete_dialog : 「はい」を選択
+  delete_dialog -> system : 削除依頼
+  system -> database : ユーザー情報削除
+  alt 削除成功
+    database --> system : 削除成功
+    system -> completion_dialog : 削除完了ダイアログ表示
+    user -> completion_dialog : OKボタンをクリック
+    completion_dialog -> login_screen : ログイン画面へ遷移
+  else 削除失敗
+    database --> system : 削除失敗
+    system -> error_dialog : 削除失敗ダイアログ表示
+    user -> error_dialog : OKボタンをクリック
+    error_dialog -> login_screen : ログイン画面へ遷移
+  end
+else 「いいえ」を選択
+  user -> delete_dialog : 「いいえ」を選択
+  delete_dialog -> user_info_screen : ダイアログを閉じる
+end
+
+@enduml
