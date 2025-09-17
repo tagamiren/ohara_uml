@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.3">
+  <diagram name="ページ1" id="ImMHhRR5a37vKUFwnUod">
+    <mxGraphModel dx="1034" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-1" value="ユーザー(訪問者)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="50" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-2" value="ログイン画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" vertex="1" parent="1">
+          <mxGeometry x="320" y="90" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-3" value="訪問者システム" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#99FFFF;" vertex="1" parent="1">
+          <mxGeometry x="770" y="330" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-4" value="ログイン処理" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#FFFFCC;" vertex="1" parent="1">
+          <mxGeometry x="550" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-6" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.14;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="KZE4EWLxJEqcz8cQHFLK-1" target="KZE4EWLxJEqcz8cQHFLK-2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="300" as="sourcePoint" />
+            <mxPoint x="490" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-7" value="入門！" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="210" y="135" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-10" value="ユーザーID・パスワード入力" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="105" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-12" value="" style="endArrow=block;startArrow=block;endFill=1;startFill=1;html=1;rounded=0;entryX=0.295;entryY=0.105;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.01;exitY=0.73;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="KZE4EWLxJEqcz8cQHFLK-4" target="KZE4EWLxJEqcz8cQHFLK-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="300" as="sourcePoint" />
+            <mxPoint x="490" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-13" value="ユーザーID・パスワードのデータ取得" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="670" y="260" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-14" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" vertex="1" parent="1">
+          <mxGeometry x="290" y="330" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-15" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.01;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.9;entryY=0.125;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="KZE4EWLxJEqcz8cQHFLK-4" target="KZE4EWLxJEqcz8cQHFLK-14">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="470" y="360" as="sourcePoint" />
+            <mxPoint x="625" y="414" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-16" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.336;exitY=0.04;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="KZE4EWLxJEqcz8cQHFLK-14" target="KZE4EWLxJEqcz8cQHFLK-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="441" y="280" as="sourcePoint" />
+            <mxPoint x="270" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-18" value="データが一致の場合メニュー画面" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-19" value="" style="endArrow=block;startArrow=block;endFill=1;startFill=1;html=1;rounded=0;entryX=0.12;entryY=0.26;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="KZE4EWLxJEqcz8cQHFLK-2" target="KZE4EWLxJEqcz8cQHFLK-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="460" y="210" as="sourcePoint" />
+            <mxPoint x="650" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZE4EWLxJEqcz8cQHFLK-20" value="データが不一致の場合ログイン画面" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="175" width="220" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

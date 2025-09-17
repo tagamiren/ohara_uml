@@ -1,0 +1,40 @@
+@startuml
+actor ユーザー as Visitor
+
+boundary "ログイン画面" as LoginBoundary #FFCCCC
+boundary "メニュー画面" as MenuBoundary #FFCCCC
+control "ログイン処理" as LoginControl #FFFFCC
+entity "訪問者システム" as VisitorEntity #99FFFF
+
+Visitor -> LoginBoundary : 入門()
+activate LoginBoundary
+
+LoginBoundary -> Visitor : ユーザーID・パスワード入力依頼()
+Visitor -> LoginBoundary : ユーザーID・パスワード入力()
+
+LoginBoundary -> LoginControl : 入力値送信()
+deactivate LoginBoundary
+activate LoginControl
+
+LoginControl -> VisitorEntity : ユーザーID・パスワードのデータ取得()
+activate VisitorEntity
+VisitorEntity --> LoginControl : データを取得応答()
+deactivate VisitorEntity
+
+LoginControl --> LoginControl : 認証結果（成功/失敗）()
+
+alt 認証成功
+    LoginControl -> MenuBoundary : メニュー画面へ()
+    activate MenuBoundary
+    MenuBoundary -> Visitor : メニュー画面を表示()
+    deactivate MenuBoundary
+else 認証失敗
+    LoginControl -> LoginBoundary : ログイン画面再表示()
+    activate LoginBoundary
+    LoginBoundary -> Visitor : 再度、ユーザーIDとパスワードの入力依頼()
+    deactivate LoginBoundary
+end
+
+deactivate LoginControl
+
+@enduml
