@@ -1,0 +1,25 @@
+@startuml 図書館システムユースケース
+skinparam actorStyle stick
+left to right direction
+
+actor 利用者
+actor 事務職員
+
+(貸出予約をする) as UC1
+(貸出履歴を閲覧する) as UC2
+(本を貸出、返却をする) as UC3
+(会員登録をする) as UC4
+' (本を返却する) as UC4
+(予約者に通知する) as UC5
+
+事務職員 -- UC5
+
+利用者 -- UC1
+利用者 -- UC2
+利用者 -- UC3
+利用者 -- UC4
+
+
+UC5 --> 利用者 : 通知
+
+@enduml

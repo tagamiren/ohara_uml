@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+skinparam rectangle {
+  BackgroundColor<<boundary>> LightBlue
+  BackgroundColor<<control>> LightCoral
+  BackgroundColor<<entity>> LightGreen
+  BorderColor Black
+  RoundCorner 15
+}
+
+actor 利用者
+actor 事務職員
+
+rectangle "予約画面" <<boundary>> as Boundary_Reservation
+rectangle "予約処理制御" <<control>> as Control_Reservation
+
+rectangle "会員" <<entity>> as Entity_User
+rectangle "図書" <<entity>> as Entity_Book
+rectangle "予約情報" <<entity>> as Entity_Reservation
+
+利用者 --> Boundary_Reservation : 予約カード・学生証/職員証を提示
+事務職員 --> Boundary_Reservation : 会員番号と書名を入力
+
+Boundary_Reservation --> Control_Reservation : 予約要求
+Control_Reservation --> Entity_User : 会員を確認
+Control_Reservation --> Entity_Book : 書名から対象図書を検索
+Control_Reservation --> Entity_Reservation : 予約情報を登録
+
+Control_Reservation --> Boundary_Reservation : 完了メッセージ表示
+
+' --- 代替フロー ---
+Control_Reservation --> Entity_Reservation : 予約待ちリストに追加（すでに予約済みの場合）
+@enduml
