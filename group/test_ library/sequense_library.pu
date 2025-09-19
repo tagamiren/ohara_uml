@@ -1,0 +1,72 @@
+@startuml
+actor "事務職員" as Clerk
+
+boundary "システムメニュー画面" as SystemMenuBoundary #FFCCCC
+boundary "登録画面" as RegistrationBoundary #FFCCCC
+boundary "登録成功画面" as SuccessScreen #FFCCCC
+control "入力内容検証処理" as ValidationControl #FFFFCC
+control "登録処理" as RegistrationControl #FFFFCC
+control "登録成功表示処理" as SuccessDisplayControl #FFFFCC
+control "登録失敗表示処理" as FailureDisplayControl #FFFFCC
+entity "図書システム" as LibrarySystem #99FFFF
+
+Clerk -> SystemMenuBoundary : 会員登録をクリック()
+activate SystemMenuBoundary
+
+SystemMenuBoundary -> RegistrationBoundary : 登録画面表示()
+deactivate SystemMenuBoundary
+activate RegistrationBoundary
+
+RegistrationBoundary -> Clerk : 学生番号/教職員番号入力依頼()
+Clerk -> RegistrationBoundary : 学生番号/教職員番号を入力()
+
+RegistrationBoundary -> ValidationControl : 値を送信()
+deactivate RegistrationBoundary
+activate ValidationControl
+
+ValidationControl --> ValidationControl : 入力内容を検証()
+
+alt 入力内容に誤り
+    ValidationControl -> FailureDisplayControl : 登録失敗表示処理()
+    deactivate ValidationControl
+    activate FailureDisplayControl
+    
+    FailureDisplayControl -> RegistrationBoundary : 登録画面へ戻る()
+    deactivate FailureDisplayControl
+    activate RegistrationBoundary
+    
+    RegistrationBoundary -> Clerk : 入力エラーメッセージを表示()
+else 入力内容が正しい
+    
+    activate ValidationControl
+    ValidationControl -> RegistrationControl : 登録要求()
+    deactivate ValidationControl
+    activate RegistrationControl
+    
+    RegistrationControl -> LibrarySystem : 登録データ送信()
+    activate LibrarySystem
+    LibrarySystem --> RegistrationControl : 登録結果応答()
+    deactivate LibrarySystem
+    
+    alt 登録成功
+        RegistrationControl -> SuccessDisplayControl : 登録成功表示処理()
+        deactivate RegistrationControl
+        activate SuccessDisplayControl
+        SuccessDisplayControl -> SuccessScreen : 成功画面表示()
+        deactivate SuccessDisplayControl
+        activate SuccessScreen
+        SuccessScreen --> Clerk : 登録成功メッセージを表示()
+        deactivate SuccessScreen
+    else 登録失敗
+        RegistrationControl -> FailureDisplayControl : 登録失敗表示処理()
+        deactivate RegistrationControl
+        activate FailureDisplayControl
+        
+        FailureDisplayControl -> RegistrationBoundary : 登録画面へ戻る()
+        deactivate FailureDisplayControl
+        activate RegistrationBoundary
+        
+        RegistrationBoundary -> Clerk : 登録失敗メッセージを表示()
+    end
+end
+@enduml
