@@ -1,37 +1,44 @@
-@startuml
-actor ユーザー
-boundary メニュー画面 #FFCCCC
-boundary 整数入力画面 #FFCCCC
-control 2つの整数の表示 #FFFF99
-control 2つの整数を設定 #FFFF99
-control 足し算の処理 #FFFF99
-entity RoboDog #99FF99
-boundary 結果画面 #FFCCCC
-
-ユーザー -> メニュー画面 : 足し算を選択
-activate メニュー画面
-メニュー画面 -> 整数入力画面 : 遷移
-deactivate メニュー画面
-
-activate 整数入力画面
-ユーザー -> 整数入力画面 : 整数を入力
-整数入力画面 -> 2つの整数の表示 : 入力された整数を表示
-deactivate 整数入力画面
-
-activate 2つの整数の表示
-2つの整数の表示 -> 2つの整数を設定 : 整数を渡す
-deactivate 2つの整数の表示
-
-activate 2つの整数を設定
-2つの整数を設定 -> 足し算の処理 : 整数を渡す
-deactivate 2つの整数を設定
-
-activate 足し算の処理
-足し算の処理 -> RoboDog : 計算結果を登録
-deactivate 足し算の処理
-
-activate RoboDog
-RoboDog -> 結果画面 : 結果を表示
-deactivate RoboDog
-
+@startuml RoboDog-２つの整数の足し算シーケンス図
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+ 
+actor ユーザー as A
+boundary "Robodog_menu.htm" as B1
+boundary "AddNumbersData.htm" as B2
+boundary 計算結果画面 as B3
+control "AddNumbers.jsp" as C1
+control 足し算処理 as C2
+entity "Robodog.java" as E
+ 
+A -> B1: 「２つの整数の足し算」を選択()
+activate B1
+ 
+B1 -> B2: 表示()
+deactivate B1
+activate B2
+ 
+A -> B2: ２つの整数を入力()
+ 
+B2 -> C1: ２つの整数を登録()
+activate C1
+C1 -> E: setTwoValues()
+activate E
+E --> C1: 保存完了
+deactivate E
+ 
+C1 -> C2: 足し算処理を行う()
+deactivate C1
+activate C2
+C2 -> E: setAndGetResult()
+activate E
+E --> C2: 登録完了
+deactivate E
+ 
+C2 -> B3: 表示()
+deactivate C2
+deactivate B2
+activate B3
+ 
 @enduml

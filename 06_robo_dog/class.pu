@@ -18,9 +18,11 @@ class RoboDog {
  +setNewTime()
 '  +時刻に応じた挨拶の言葉を取得()
  +getMyGreeting()
- +2つの整数を設定()
- +足し算結果登録()
- +足し算結果取得()
+'  +2つの整数を設定()
+ +setTwoValues()
+'  +足し算結果登録()
+'  +足し算結果取得()
+ +setAndGetResult()
 }
 
 @enduml
