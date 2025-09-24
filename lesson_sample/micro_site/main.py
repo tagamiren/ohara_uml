@@ -20,7 +20,8 @@ def application(environ, start_response):
 
     elif path == "/greeting":
         greeting = get_greeting()
-        body = render_template("templates/greeting.html", greeting=greeting, name_display=name or "ゲスト")
+        # body = render_template("templates/greeting.html", greeting=greeting, name_display=name or "ゲスト")
+        body = render_template("templates/greeting.html", greeting=greeting)
 
     else:
         start_response("404 Not Found", [("Content-Type", "text/plain; charset=utf-8")])
