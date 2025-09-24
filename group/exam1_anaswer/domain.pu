@@ -1,0 +1,58 @@
+@startuml
+skinparam handwritten true
+skinparam componentStyle rectangle
+
+rectangle 学生
+rectangle 学生番号
+rectangle 教職員
+rectangle 職員番号
+rectangle 会員
+rectangle 会員番号
+rectangle 氏名
+rectangle メールアドレス
+rectangle 図書
+rectangle 書籍
+rectangle 雑誌
+rectangle 管理番号
+rectangle 書名
+rectangle 著者
+rectangle 出版社
+rectangle ISBN
+rectangle 予約情報
+rectangle 予約日時
+rectangle 貸出情報
+rectangle 貸出日
+rectangle 返却日
+
+学生 --> 学生番号
+教職員 --> 職員番号
+
+学生 --> 会員
+教職員 --> 会員
+
+
+会員 <-- 会員番号
+会員 <-- 氏名
+会員 <-- メールアドレス
+会員番号 <-- 学生番号
+会員番号 <-- 職員番号
+
+図書 --> 書籍
+図書 --> 雑誌
+
+図書 --> 管理番号
+図書 --> 書名
+図書 --> 著者
+図書 --> 出版社
+図書 --> ISBN
+
+会員 --> 予約情報
+図書 --> 予約情報
+予約情報 --> 予約日時
+
+会員 --> 貸出情報
+図書 --> 貸出情報
+貸出情報 --> 貸出日
+貸出情報 --> 返却日
+
+@enduml
