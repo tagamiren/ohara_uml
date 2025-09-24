@@ -4,6 +4,8 @@ hide circle
 
 class RoboDog {
  -myName: Storing
+'  myTimeはDateTimeかも bigint?=UNIXTime
+' UNIXTimeとは 1900/01/01 00:00:00 を0として、1ずつ追加する
  -myTime: int
  -goodMorning: Storing
  -goodAfternoon: Storing
@@ -13,7 +15,7 @@ class RoboDog {
 '  教科書にない
  -result: int
 
-' 返り値
+' 返り値: void 何も値を返さない
  +getMyName(): Storing
  +setMyName(): int
 '  +時刻の設定()
