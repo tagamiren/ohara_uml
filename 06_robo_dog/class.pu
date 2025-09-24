@@ -14,8 +14,10 @@ class RoboDog {
 
  +getMyName()
  +setMyName()
- +時刻の設定()
- +時刻に応じた挨拶の言葉を取得()
+'  +時刻の設定()
+ +setNewTime()
+'  +時刻に応じた挨拶の言葉を取得()
+ +getMyGreeting()
  +2つの整数を設定()
  +足し算結果登録()
  +足し算結果取得()
