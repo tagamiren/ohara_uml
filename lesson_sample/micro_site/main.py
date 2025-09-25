@@ -1,5 +1,7 @@
 from wsgiref.simple_server import make_server
-from app_logic import save_name, load_name, get_greeting, parse_post, render_template
+from controllers.robodog_menu import robodog_menu
+from controllers.change_my_name_data import change_my_name_data
+from controllers.greet_with_time import greet_with_time
 
 
 def application(environ, start_response):
@@ -8,23 +10,16 @@ def application(environ, start_response):
     headers = [("Content-Type", "text/html; charset=utf-8")]
 
     if path == "/":
-        body = render_template("templates/menu.html")
+        body = robodog_menu()
 
     elif path == "/name":
-        name = load_name()
-        if method == "POST":
-            data = parse_post(environ)
-            name = data.get("name", [""])[0]
-            save_name(name)
-        body = render_template("templates/name.html", name=name, name_display=name or "未設定")
+        body = change_my_name_data(environ)
 
     elif path == "/greeting":
-        greeting = get_greeting()
-        # body = render_template("templates/greeting.html", greeting=greeting, name_display=name or "ゲスト")
-        body = render_template("templates/greeting.html", greeting=greeting)
+        body = greet_with_time()
 
     else:
-        start_response("404 Not Found", [("Content-Type", "text/plain; charset=utf-8")])
+        start_response("404 Not Found", headers)
         return [b"Not Found"]
 
     start_response("200 OK", headers)

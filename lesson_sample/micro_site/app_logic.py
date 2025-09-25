@@ -1,49 +1,46 @@
 import json
-import os
-from urllib.parse import parse_qs
 import datetime
 
 ROBODOG_FILE = "robodog.json"
 
-def save_name(name):
-    """名前をJSONに保存"""
-    with open(ROBODOG_FILE, "w", encoding="utf-8") as f:
-        json.dump({"name": name}, f, ensure_ascii=False)
 
-def load_name():
+def set_my_name(name) -> None:
+    """名前をJSONに保存"""
+    with open(ROBODOG_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    data['my_name'] = name
+    with open(ROBODOG_FILE, 'w', encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def get_my_name() -> str:
     """JSONから名前を読み出す。なければ空文字"""
-    if not os.path.exists(ROBODOG_FILE):
-        return ""
     try:
         with open(ROBODOG_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return data.get("name", "")
+        return data.get("my_name", "")
     except (json.JSONDecodeError, OSError):
         return ""
-def get_greeting():
+    
+def set_new_time() -> None:
+    """現在時刻をJSONに保存"""
+    with open(ROBODOG_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    data['my_time'] = datetime.datetime.now().hour
+    with open(ROBODOG_FILE, 'w', encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def get_my_greeting() -> str:
     """時刻に応じた挨拶を返す"""
-    hour = datetime.datetime.now().hour
-    if 5 <= hour < 11:
-        return "おはよう"
-    elif 11 <= hour < 18:
-        return "こんにちは"
-    else:
-        return "こんばんは"
-
-
-def parse_post(environ):
-    """POSTデータを辞書で返す"""
     try:
-        request_body_size = int(environ.get("CONTENT_LENGTH", 0))
-    except (ValueError):
-        request_body_size = 0
+        with open(ROBODOG_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
 
-    body = environ["wsgi.input"].read(request_body_size).decode("utf-8")
-    return parse_qs(body)
-
-
-def render_template(path, **kwargs):
-    """テンプレートを読み込み、変数を埋め込み"""
-    with open(path, "r", encoding="utf-8") as f:
-        template = f.read()
-    return template.format(**kwargs)
+        my_time = int(data.get("my_time", "")) or 0
+        if 6 <= my_time < 12:
+            return data.get("good_morning")
+        elif 12 <= my_time < 18:
+            return data.get("good_afternoon")
+        else:
+            return data.get("good_night")
+    except (json.JSONDecodeError, OSError):
+        return ""
