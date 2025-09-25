@@ -70,5 +70,6 @@ def get_addition() -> int:
         data = json.load(f)
 
     addition = data['first_value'] + data['second_value']
+    addition = data.get('first_value', 0) + data.get('second_value', 0)
 
     return addition
