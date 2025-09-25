@@ -3,8 +3,15 @@
 <body>
     <h1>足し算をする</h1>
     <!-- first_value, second_value の入力・送信 -->
+     <form method="POST">
+        <label>足し算:</label>
+        <input type="number" name="first_value">
+        <input type="number" name="second_value">
+        <input type="submit" value="コミット">
+    </form>
 
     <!-- 足し算の結果 addition -->
+    <p>足し算の結果: {addition}</p></p>
     <p><a href="/">メインメニューに戻る</a></p>
 </body>
 </html>
