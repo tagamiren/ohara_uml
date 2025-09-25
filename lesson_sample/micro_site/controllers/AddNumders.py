@@ -8,7 +8,7 @@ def add_number(environ):
 
     if method == "GET":
         # GETリクエストの場合はフォームを表示
-        return render_template("boundaries/add_num_bers_data.html")
+        return render_template("boundaries/add_numbers_data.html")
 
     elif method == "POST":
         # POSTリクエストの場合はフォームデータを処理
