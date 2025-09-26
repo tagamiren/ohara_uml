@@ -1,0 +1,27 @@
+@startuml
+skinparam actorStyle awesome
+
+actor 顧客 as user
+actor 管理者 as admin
+participant "BBショップ Webサイト" as website
+participant "注文管理システム" as order_system
+participant "決済サービス" as payment_service
+participant "クレジットカード会社" as credit_card_co
+participant "工場" as factory
+participant "運送会社" as delivery_company
+
+user -> website : ログイン / 注文
+website -> order_system : 注文情報送信
+website -> payment_service : 決済リクエスト
+payment_service -> credit_card_co : 承認/実行
+credit_card_co -> payment_service : 結果通知
+payment_service -> website : 決済結果通知
+order_system -> factory : 出荷指示
+order_system -> delivery_company : 出荷情報連携
+order_system -> delivery_company : 配送状況確認
+delivery_company -> order_system : 配送状況通知
+factory -> delivery_company : 商品受け渡し
+
+admin -> order_system : 注文状況確認 / 指示
+
+@enduml
