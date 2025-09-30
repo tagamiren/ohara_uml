@@ -1,0 +1,177 @@
+<mxfile host="65bd71144e">
+    <diagram name="ページ1" id="TN5GZldVQ0bzjK4ATlJ-">
+        <mxGraphModel dx="1986" dy="1936" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="Obti_GmHwJAL796aEmRM-1" value="エンドユーザー" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="150" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-2" value="管理者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="990" y="235" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-3" value="ログイン" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="100" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-1" target="Obti_GmHwJAL796aEmRM-3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="320" as="sourcePoint"/>
+                        <mxPoint x="440" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-3" target="Obti_GmHwJAL796aEmRM-11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="320" y="224" as="sourcePoint"/>
+                        <mxPoint x="420" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-11" value="BBショップ&lt;br&gt;Webサイト" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="165" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-12" value="商品を購入するためにログイン" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="60" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-1" target="Obti_GmHwJAL796aEmRM-11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="180" y="271" as="sourcePoint"/>
+                        <mxPoint x="270" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-14" value="未ログインでも一覧のみ確認可能" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="165" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-15" value="BBショップ&lt;br&gt;注文管理システム" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFFE6;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="250" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-2" target="Obti_GmHwJAL796aEmRM-15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="650" y="170" as="sourcePoint"/>
+                        <mxPoint x="760" y="235" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-17" value="商品の状態確認、返品・返金対応をする" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="230" width="240" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-23" value="工場" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCFFE6;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="300" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-24" value="運送会社" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="450" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-25" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-11" target="Obti_GmHwJAL796aEmRM-15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="290" as="sourcePoint"/>
+                        <mxPoint x="590" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-27" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-23" target="Obti_GmHwJAL796aEmRM-15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="570" y="390" as="sourcePoint"/>
+                        <mxPoint x="730" y="455" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-24" target="Obti_GmHwJAL796aEmRM-15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550" y="430" as="sourcePoint"/>
+                        <mxPoint x="710" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-29" value="商品の状態を工場や&lt;br&gt;運送会社から確認" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="290" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-11" target="Obti_GmHwJAL796aEmRM-23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="330" as="sourcePoint"/>
+                        <mxPoint x="590" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-31" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-23" target="Obti_GmHwJAL796aEmRM-24" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="330" as="sourcePoint"/>
+                        <mxPoint x="590" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-33" value="webサイトから&lt;br&gt;伝票などのデータを送付&lt;br&gt;情報は、（利用者ID, 名前, 住所, 電話番号, &lt;br&gt;メールアドレス, 商品番号, 注文番号）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="205" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-34" value="洋服の通販サイト&lt;br&gt;ターゲット層：10～30代&lt;br&gt;価格帯：リーズナブルにしたい（1万以下を目安）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="355" y="-40" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-35" value="工場から運送会社に伝票などのデータを送付&lt;br&gt;（利用者ID, 名前, 住所, 電話番号,&lt;br&gt;メールアドレス, 商品番号, 注文番号）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="350" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-36" value="クレジット会社" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="20" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-37" value="返品依頼がきたら注文管理システムで&lt;br&gt;クレジット会社に" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="190" width="230" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-39" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.895;exitY=0.04;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Obti_GmHwJAL796aEmRM-11" target="Obti_GmHwJAL796aEmRM-36" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="430" y="150" as="sourcePoint"/>
+                        <mxPoint x="620" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-43" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.636;entryY=1.065;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.676;exitY=-0.025;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Obti_GmHwJAL796aEmRM-15" target="Obti_GmHwJAL796aEmRM-36" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="450" y="260" as="sourcePoint"/>
+                        <mxPoint x="500" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-44" value="返金依頼&lt;br&gt;利用者の情報などを送付する&lt;br&gt;情報(名前, 住所, 電話番号,&lt;br&gt;メールアドレス, 価格, クレカ情報)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="110" width="210" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-45" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.38;exitY=0.995;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Obti_GmHwJAL796aEmRM-15" target="Obti_GmHwJAL796aEmRM-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="880" y="400" as="sourcePoint"/>
+                        <mxPoint x="60" y="250" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="660" y="550"/>
+                            <mxPoint x="360" y="550"/>
+                            <mxPoint x="80" y="550"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-46" value="返金対応" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="344" y="520" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-48" value="運送会社は&lt;br&gt;工場に商品を受け取りに行く" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="234" y="400" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-50" value="商品番号の頭文字ごとに倉庫で管理&lt;br&gt;商品番号の例：A001、B001" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="295" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-51" value="利用者情報,&lt;br&gt;クレカ情報&lt;br&gt;購入した商品番号&lt;br&gt;注文番号を保存" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="210" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-53" value="返品する際には、購入した商品の伝票を&lt;br&gt;提示したい" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-180" y="130" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-54" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Obti_GmHwJAL796aEmRM-24" target="Obti_GmHwJAL796aEmRM-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="150" y="510" as="sourcePoint"/>
+                        <mxPoint x="290" y="575" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="180" y="490"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-56" value="&lt;span data-teams=&quot;true&quot;&gt;&lt;p&gt;EndUserが、12:00に商品を3種類購入しました。&lt;/p&gt;&lt;p&gt;Q1. 購入直後、3種類の商品それぞれは、どこに、どんな状態で存在する？&lt;/p&gt;&lt;p&gt;A1.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;商品番号の頭文字ごとに倉庫で管理(ハンガーにかけてある状態)&lt;/span&gt;&lt;/p&gt;商品番号の例：A001、B001&lt;p&gt;Q2. 当日17:00 の時、3種類の商品それぞれは、どこに、どんな状態で存在する？&lt;/p&gt;&lt;p&gt;A2. 運送会社は翌日に受け取る。工場では商品を梱包し、受け渡す準備。&lt;/p&gt;&lt;p&gt;Q3. 翌日12:00 の時、3種類の商品それぞれは、どこに、どんな状態で存在する？&lt;/p&gt;&lt;p&gt;A3. 運送会社が工場に商品を受け取りに行き、運送会社側で商品を配達地域ごとに管理&lt;/p&gt;&lt;p&gt;Q4. 翌々日12:00 の時、3種類の商品それぞれは、どこに、どんな状態で存在する？&lt;/p&gt;&lt;p&gt;A4. 運送会社が商品をエンドユーザーに配達&lt;/p&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-420" y="250" width="490" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="Obti_GmHwJAL796aEmRM-57" value="品切れの商品は&lt;br&gt;[品切れ]と&lt;br&gt;表示させる" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="110" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Web管理システム（顧客接点）: &lt;b&gt;青系&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-370" y="578" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="注文管理システム（データ処理の中核）: &lt;b&gt;緑系&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-400" y="620" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="外部連携・物流　赤系" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-330" y="660" width="140" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

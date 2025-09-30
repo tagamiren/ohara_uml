@@ -1,0 +1,44 @@
+@startuml BBショップユースケース図 
+left to right direction 
+actor 顧客 as U 
+actor 管理者 as M 
+
+rectangle 販売システム {  
+  usecase "ログインする" as UC1   
+  usecase "クレジットカードを選択する" as UC2   
+  usecase "商品を購入する" as UC3   
+  usecase "返品依頼をする" as UC4   
+  usecase "利用者の情報を送付する" as UC5   
+  usecase "ログアウトする" as UC6
+  usecase "一覧を閲覧できる" as UC13
+  usecase "配送状況を確認する" as UC15
+  usecase "カートに追加する" as UC17
+
+}  
+
+rectangle  管理システム{ 
+  usecase "ログインをする"
+  usecase "ログアウトする" 
+  usecase "返品・返金処理する" as UC7      
+  usecase "注文履歴を確認する" as UC11
+  usecase "顧客情報を参照する" as UC16
+
+}  
+
+
+U --> UC1 
+U --> UC2 
+U --> UC3 
+U --> UC4 
+U --> UC5 
+U --> UC6 
+U --> UC13
+U --> UC15 
+U --> UC17
+
+M --> UC7 
+M --> UC11
+M --> UC16
+
+@enduml
+ 
