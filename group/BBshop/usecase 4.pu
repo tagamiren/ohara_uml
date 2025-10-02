@@ -6,7 +6,7 @@ actor 注文管理者 as M
 actor 倉庫管理者 as D
 actor カスタマーサポート as C
 
-actor 顧客 as U
+actor ユーザー as U
 
 
 
