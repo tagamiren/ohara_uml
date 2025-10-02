@@ -1,0 +1,90 @@
+@startuml BBショップユースケース図 
+left to right direction 
+
+actor システム管理者 as S
+actor 注文管理者 as M 
+actor 倉庫管理者 as D
+actor カスタマーサポート as C
+
+actor 顧客 as U
+
+
+
+
+rectangle  管理システム{ 
+  usecase "ログインをする" as UC1
+  usecase "ログアウトする" as UC2
+  usecase "在庫を確認する" as UC3
+  usecase "返品・返金処理する" as UC4
+  usecase "顧客問い合わせ管理をする" as UC5
+  usecase "商品を登録する" as UC6
+  usecase "商品情報を更新する" as UC7
+  usecase "商品を削除する" as UC8
+  usecase "注文履歴を確認する" as UC9
+  usecase "顧客情報を参照する" as UC10
+  usecase "出荷指示を確認する" as UC11
+  usecase "配送を手配する" as UC12
+  usecase "出荷状況を更新する" as UC13
+  usecase "アカウント利用停止する" as UC14
+  usecase "アカウント作成" as UC27
+
+}  
+
+
+rectangle 販売システム {  
+  usecase "ログインする" as UC15
+  usecase "ログアウトする" as UC16
+  usecase "カートに追加する" as UC17
+  usecase "カートを閲覧できる" as UC18
+  usecase "カートから削除する" as UC19
+  usecase "商品を購入する" as UC20
+  usecase "返品依頼をする" as UC21    
+  usecase "商品の一覧を閲覧できる" as UC22
+  usecase "配送状況を確認する" as UC23
+  usecase "商品を検索する" as UC24
+  usecase "注文履歴を確認する" as UC25
+  usecase "退会する" as UC26
+
+}  
+
+
+
+
+S --> UC1
+S --> UC2
+S --> UC14
+S --> UC27
+
+
+M --> UC3
+M --> UC6
+M --> UC7
+M --> UC8
+M --> UC9
+M --> UC10
+
+
+
+D --> UC11
+D --> UC12
+D --> UC13
+
+C --> UC4
+C --> UC5
+C --> UC10
+
+U --> UC15
+U --> UC16
+U --> UC17
+U --> UC18
+U --> UC19
+U --> UC20
+U --> UC21
+U --> UC22
+U --> UC23
+U --> UC24
+U --> UC25
+U --> UC26
+
+@enduml
+ 
