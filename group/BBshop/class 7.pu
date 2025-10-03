@@ -1,0 +1,126 @@
+@startuml BBShopOrderManagementSystem
+skinparam classAttributeIconSize 0
+hide circle
+hide empty members
+
+class User {
+  -userID: int
+  -name: string
+  -emailAddress: string
+  -phoneNumber: string
+  -address: string
+  -password: string
+
+  +login()
+  +logout()
+  +withdraw()
+  +purchaseProduct()
+  +requestReturn()
+  +checkDeliveryStatus()
+}
+
+class Administrator {
+  -administratorID: int
+  -name: string
+  -type: string
+  -orderHistory: string
+
+  +login()
+  +logout()
+  +createAccount()
+  +referenceCustomerInformation()
+  +checkOrderHistory()
+  +checkShipmentInstructions()
+  +handleCustomerInquiry()
+  +processReturn()
+  +suspendCustomerAccount()
+}
+
+class Product {
+  -productID: int
+  -productInformation: string
+  -price: float
+  -stockQuantity: int
+
+  +registerProduct()
+  +updateProduct()
+  +deleteProduct()
+  +checkStock()
+  +browseProductList()
+  +searchProduct()
+}
+
+class ShoppingCart {
+  -userID: int
+  -productID: int
+  -quantity: int
+
+  +addProductToCart()
+  +viewCartContents()
+  +removeProductFromCart()
+}
+
+
+class Order {
+  -orderID: int
+  -userID: int
+  -orderDate: datetime
+  -shipmentStatusID: int
+  -orderTypeID: int
+
+  +checkOrderHistory()
+  +updateShipmentStatus()
+}
+
+class OrderDetail {
+  -orderID: int
+  -productID: int
+  -quantity: int
+  -subtotal: float
+}
+
+class PaymentLog {
+  -paymentID: int
+  -orderID: int
+  -paymentAmount: float
+  -paymentDate: datetime
+}
+
+class Shipping {
+  -recipientName: string
+  -deliveryTimeSelection: datetime
+  -deliveryDateTime: datetime
+
+  +arrangeShipping()
+}
+
+class Return {
+  -returnID: int
+  -orderID: int
+  -reason: string
+  -productName: int
+  -returnDateTime: datetime
+  -refundAmount: float
+}
+
+class Type {
+  -warehouseManager
+  -orderManager
+  -customerSupport
+}
+
+User "1" -- "0..*" ShoppingCart
+ShoppingCart "0..*" -- "1" Product
+User "1" -- "0..*" Order
+
+Order "1" -- "1..*" OrderDetail
+OrderDetail "0..*" -- "1" Product
+
+Order "1" -- "0..*" PaymentLog
+Order "1" -- "0..1" Shipping
+Order "1" -- "0..*" Return
+
+
+Administrator "1" -- "1" Type
+
+@enduml
